@@ -1,7 +1,9 @@
-import 'package:chatty/pages/frame/message/controller.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'controller.dart';
 
 
 class MessagePage extends GetView<MessageController> {

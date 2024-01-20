@@ -1,5 +1,5 @@
-import 'package:chatty/common/routes/names.dart';
-import 'package:chatty/pages/frame/message/index.dart';
+
+import 'package:chatty/pages/message/state.dart';
 import 'package:get/get.dart';
 
 
