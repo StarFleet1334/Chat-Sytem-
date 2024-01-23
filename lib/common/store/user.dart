@@ -9,7 +9,7 @@ class UserStore extends GetxController {
   static UserStore get to => Get.find();
 
   // 是否登录
-  final _isLogin = false.obs;
+   RxBool _isLogin = false.obs;
   // 令牌 token
   String token = '';
   // 用户 profile
@@ -35,6 +35,13 @@ class UserStore extends GetxController {
     await StorageService.to.setString(STORAGE_USER_TOKEN_KEY, value);
     token = value;
   }
+
+  // Function to set the login state
+  Future<void> setIsLogin(bool loginState) async {
+    _isLogin.value = loginState; // This sets the login status to the value passed to the function.
+    // If you want to perform additional actions when login state changes, do it here.
+  }
+
 
   // 获取 profile
   Future<String> getProfile() async {
