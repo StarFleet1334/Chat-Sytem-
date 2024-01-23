@@ -1,5 +1,6 @@
 
 import 'package:chatty/common/entities/entities.dart';
+import 'package:chatty/common/routes/names.dart';
 import 'package:chatty/pages/frame/signin/state.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -36,6 +37,7 @@ class SignInController extends GetxController {
             loginPanelListRequest.email = email;
             loginPanelListRequest.open_id = id;
             loginPanelListRequest.type = 2;
+            asyncPostAllData();
           }
         }
       } else {
@@ -48,6 +50,10 @@ class SignInController extends GetxController {
         print("...error with login $e");
       }
     }
+  }
+
+  asyncPostAllData() {
+    Get.offAllNamed(AppRoutes.Message);
   }
 
 }
